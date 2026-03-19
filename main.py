@@ -1,20 +1,36 @@
 import pandas as pd
 import numpy as np
+from src.load_data import load_worldData
+from src.clean_data import clean_data
 
 def main():
+    df = pd.DataFrame()
+    clean_df = pd.DataFrame()
+
     print("=== World Data Analysis Tool ===")
     while True:
-
- 
         print("\nMenu:")
         print("1. Load and clean data")
         print("2. Answer analysis questions")
         print("3. Exit")
 
         choice = input("Select an option: ")
-
+        
+        # 1. Load & clean Data
+        if choice == "1":
+            df = load_worldData()
+            clean_df = clean_data(df)
+        
+        # 2. Analysis questions
+        elif choice == "2":
+            if clean_df.empty:
+                print("Please load and clean data first.")
+            else:
+                print("Data is loaded and clean.")
+                print(clean_df.to_string())
+           
         # 3. Exit
-        if choice == "3":
+        elif choice == "3":
             print("Exiting program.")
             break
         else:
