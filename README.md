@@ -8,6 +8,9 @@
 
 # 2. Create a Virtual Envrionment
 - `python3 -m venv .venv`
+### If venv creation fails due to keyboard interrupt:
+- `rm -rf .venv`
+- `python3 -m venv .venv`
 
 # 3. Activate the Virtual Envrionment
 ### macOS/Linux
