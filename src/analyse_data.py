@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 # Which continent has the most countries in the data?
 def get_most_freq_continent(df: pd.DataFrame) -> dict[str, any]:
