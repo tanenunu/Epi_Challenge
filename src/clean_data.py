@@ -26,7 +26,7 @@ def standardize_null_values(df: pd.DataFrame) -> pd.DataFrame:
     clean_df[cols] = clean_df[cols].mask(clean_df[cols] <= 0)
 
     # Any lifeExp value that is over 100, set to NaN
-    df["lifeExp"] = df["lifeExp"].mask(df["lifeExp"] > 100)
+    clean_df["lifeExp"] = clean_df["lifeExp"].mask(clean_df["lifeExp"] > 100)
 
     return clean_df
 
