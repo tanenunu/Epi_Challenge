@@ -6,6 +6,8 @@ throwaways/
 __pycache__/
 *.pyc
 
+data/exports/*
+!data/exports/.gitkeep
 
 .DS_Store
 
