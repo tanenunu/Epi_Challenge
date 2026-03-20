@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from src.load_data import load_worldData
 from src.clean_data import clean_data
+from src.analyse_data import get_most_freq_continent
 
 def main():
     df = pd.DataFrame()
@@ -27,7 +28,10 @@ def main():
                 print("Please load and clean data first.")
             else:
                 print("Data is loaded and clean.")
-                print(clean_df.to_string())
+                result = get_most_freq_continent(clean_df)
+                print(f"{result["name"]} {result["value"]}")
+                
+                #print(clean_df.to_string())
            
         # 3. Exit
         elif choice == "3":
