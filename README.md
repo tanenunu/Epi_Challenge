@@ -3,7 +3,7 @@
 - pip (comes with Python)
 
 # 1. Clone or Download the Project
-- `git clone <your-repo-url>`
+- `git clone https://github.com/tanenunu/Epi_Challenge.git`
 - `cd Epi_Challenge`
 
 # 2. Create a Virtual Envrionment
