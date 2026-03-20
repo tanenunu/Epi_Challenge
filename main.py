@@ -94,19 +94,24 @@ def main():
                 user_input = input("Export cleaned dataset as csv?\n 1. Yes\n 2. No\nSelect Option:  ")
                 if user_input == "1":
                     filename = input("Enter filename (default: cleaned_data.csv): ").strip()
-            
+
                     if not filename:
                         filename = "cleaned_data.csv"
-            
+
                     if not filename.endswith(".csv"):
                         filename += ".csv"
+
+                    # Strip any path separators so user can't choose another folder
+                    filename = filename.replace("/", "").replace("\\", "")
+
+                    # Always save into exports folder
+                    filename = f"data/exports/{filename}"
 
                     try:
                         clean_df.to_csv(filename, index=False)
                         print(f"Data successfully exported to {filename}")
                     except Exception as e:
                         print(f"Error exporting file: {e}")
-
                 else:
                     print("Export cancelled.")
 

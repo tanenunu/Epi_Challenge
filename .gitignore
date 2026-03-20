@@ -6,3 +6,5 @@ throwaways/
 __pycache__/
 *.pyc
 
+data/exports/
+

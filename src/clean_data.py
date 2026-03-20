@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 def remove_iso_duplicate(df: pd.DataFrame) -> pd.DataFrame:
     # Removes duplicate iso_a2 column:

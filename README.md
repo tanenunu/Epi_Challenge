@@ -20,4 +20,4 @@
 - `python -m pip install -r requirements.txt`
 
 # 5. Run the Application
-- `python main.py`
+- `python3 main.py`
